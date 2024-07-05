@@ -22,8 +22,10 @@ function createGrid(gridSize){
         square.className = "square";
         square.style.width = `${squareSize}px`;
         square.style.height = `${squareSize}px`;
+        square.style.opacity = 0;
+        square.style.backgroundColor = "black";
         square.addEventListener("mouseover", e => {
-            square.style.backgroundColor = "black";
+            square.style.opacity = +square.style.opacity + 0.1;
         })
         grid.appendChild(square);
     }

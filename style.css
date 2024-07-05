@@ -11,8 +11,3 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
-
-.square {
-    box-sizing: border-box;
-    border: 1px solid black;
-}
