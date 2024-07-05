@@ -16,15 +16,14 @@ createGrid(16);
 
 function createGrid(gridSize){
     grid.innerText = "";
-    let square;
     const squareSize = 500 / gridSize;
     for (let i = 0; i < gridSize ** 2; i++) {
-        square = document.createElement("div");
+        const square = document.createElement("div");
         square.className = "square";
         square.style.width = `${squareSize}px`;
         square.style.height = `${squareSize}px`;
-        square.addEventListener("mouseenter", e => {
-            e.target.style.backgroundColor = "black";
+        square.addEventListener("mouseover", e => {
+            square.style.backgroundColor = "black";
         })
         grid.appendChild(square);
     }
