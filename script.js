@@ -1,9 +1,18 @@
 const body = document.querySelector("body");
+
+const button = document.querySelector("button");
+button.addEventListener("click", e => {
+    let gridSize;
+    do {
+        gridSize = prompt("Enter a valid grid size (1-100): ");
+    } while (isNaN(gridSize) || gridSize != parseInt(gridSize) || gridSize < 1 || gridSize > 100)
+    createGrid(gridSize);
+})
+
 const grid = document.createElement("div");
 grid.id = "grid";
 
-let gridSize = 16;
-createGrid(gridSize);
+createGrid(16);
 
 function createGrid(gridSize){
     grid.innerText = "";
