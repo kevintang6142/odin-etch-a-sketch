@@ -3,6 +3,10 @@ button {
     margin: 16px auto;
 }
 
+p {
+    text-align: center;
+}
+
 #grid {
     width: 500px;
     height: 500px;
