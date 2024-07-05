@@ -14,6 +14,9 @@ function createGrid(gridSize){
         square.className = "square";
         square.style.width = `${squareSize}px`;
         square.style.height = `${squareSize}px`;
+        square.addEventListener("mouseenter", e => {
+            e.target.style.backgroundColor = "black";
+        })
         grid.appendChild(square);
     }
     body.appendChild(grid);
