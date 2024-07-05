@@ -4,7 +4,7 @@ const button = document.querySelector("button");
 button.addEventListener("click", e => {
     let gridSize;
     do {
-        gridSize = prompt("Enter a valid grid size (1-100): ");
+        gridSize = prompt("Enter a valid sketch resolution (1-100): ");
     } while (isNaN(gridSize) || gridSize != parseInt(gridSize) || gridSize < 1 || gridSize > 100)
     createGrid(gridSize);
 })
